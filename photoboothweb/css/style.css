@@ -1,0 +1,255 @@
+@charset "utf-8";
+
+
+* { margin: 0; padding: 0; }
+em, strong, small { font-size: inherit; font-style: normal; }
+h1, h2, h3, h4, h5, h6 { font-size: inherit; font-weight: inherit; }
+
+
+@font-face{ 
+	font-family: "FontAwesome";
+	src: url("fontawesome-webfont.woff");
+}
+
+span.icon-ok:before {
+	content: "\f00c";
+	font-family: FontAwesome;
+}
+
+body {
+	line-height: 1.5;
+	font-size: 13px;
+	font-family: Helvetica;
+}
+
+
+#container header {
+	text-align: center;
+	padding: 40px 0 30px;
+}
+#container header h1 {
+	font-size: 40px;
+	-webkit-box-reflect: below -28px -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(0.5, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.5)));
+}
+
+
+#content .mode-select {
+	position: relative;
+}
+#content .mode-select .btns {
+	font-family: FontAwesome;
+	margin: 5px 0 10px 0;
+	text-align: center;
+}
+#content .mode-select .btns span {
+	display: inline-block;
+	width: 23px;
+	height: 23px;
+	margin: 0 3px;
+	font-size: 12px;
+	line-height: 23px;
+	background-color: #F3F3F3;
+	border-radius: 30px;
+	color: #AAA;
+	vertical-align: middle;
+}
+#content .mode-select .btns span:hover {
+	background-color: #EAEAEA;
+	color: #000;
+}
+#content .mode-select .btns span:active {
+	background-color: #CCC;
+}
+#content .mode-select .btns .play_pause.play:before {
+	content: "\f04b";
+}
+#content .mode-select .btns .play_pause.pause:before {
+	content: "\f04c";
+	font-size: 11px;
+}
+#content .mode-select .btns .save:before {
+	content: "\f019";
+}
+#content .mode-select .btns .config:before {
+	content: "\f013";
+	font-size: 14px;
+}
+#content .mode-select .loading {
+	height: 60px;
+	line-height: 60px;
+	font-size: 15px;
+	text-align: center;
+	font-family: "Jockey One", Impact;
+	margin: 0 auto;
+	width: 150px;
+	display: none;
+}
+#content .mode-select .view {
+}
+#content .mode-select .view table {
+	margin: 0 auto;
+	border-collapse: collapse;
+}
+#content .mode-select .view td {
+	border: 1px #FFF solid;
+	position: relative;
+	overflow: hidden;
+}
+#content .mode-select .view canvas {
+	max-height: 200px;
+	max-width: 300px;
+	vertical-align: middle;
+}
+#content .mode-select .view .name {
+	position: absolute;
+	bottom: 7px;
+	left: 0;
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	color: #FFF;
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+	background-color: rgba(0, 0, 0, 0.5);
+}
+#content .mode-select .view .dummy {
+	position: relative;
+	background-color: #FAFAFA;
+}
+#content .mode-select .view .dummy:after {
+	content: "No image";
+	position: absolute;
+	display: block;
+	width: 100px;
+	height: 20px;
+	font-size: 12px;
+	top: 50%;
+	left: 50%;
+	margin: -10px 0 0 -50px;
+	text-align: center;
+	-webkit-transform: rotate(-30deg);
+	font-family: Helvetica;
+}
+#content .mode-select .pagebtn {
+	display: inline-block;
+	position: absolute;
+	z-index: 2;
+	top: 50%;
+	margin-top: -50px;
+	padding: 20px 0px;
+	border: 1px solid #000;
+	text-align: center;
+	line-height: 1;
+	opacity: 0.2;
+}
+#content .mode-select .pagebtn:hover {
+	opacity: 0.5;
+}
+#content .mode-select .pagebtn:active {
+	opacity: 1;
+}
+#content .mode-select .pagebtn:after {
+	display: inline-block;
+	content: "";
+	width: 0;
+	height: 0;
+	border: 10px solid transparent;
+	vertical-align: middle;
+}
+#content .mode-select .pagebtn.disable {
+	display: none;
+}
+#content .mode-select .pagebtn.back {
+	left: 0;
+	padding-right: 13px;
+	border-radius: 0px 5px 5px 0;
+	border-left-width: 0;
+}
+#content .mode-select .pagebtn.back:after {
+	border-right-color: #000;
+}
+#content .mode-select .pagebtn.next {
+	right: 0;
+	padding-left: 13px;
+	border-radius: 5px 0 0 5px;
+	border-right-width: 0;
+}
+#content .mode-select .pagebtn.next:after {
+	border-left-color: #000;
+}
+#content .page-switch {
+	margin: 20px;
+	text-align: center;
+}
+#content .page-switch span {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border-radius: 20px;
+	background-color: #CCC;
+	margin: 0 2px;
+}
+#content .page-switch span:hover {
+	background-color: #888;
+}
+#content .page-switch span.active,
+#content .page-switch span:active {
+	background-color: #333;
+}
+/* AnythingSlider */
+#content .mode-select .view .anythingSlider {
+	padding: 0;
+}
+#content .mode-select .view .anythingWindow {
+	border: 0 solid #000;
+}
+
+
+
+
+#container aside {
+	position: relative;
+	display: block;
+	margin: 30px auto 10px;
+	text-align: center;
+	border: 1px #AAA solid;
+	border-width: 1px 0;
+	width: 80%;
+}
+#container aside:after {
+	position: absolute;
+	content: "";
+	top: 10%;
+	left: 50%;
+	height: 80%;
+	display: block;
+	border-right: 1px solid #AAA;
+}
+#container aside div {
+	display: inline-block;
+	width: 40%;
+	margin: 10px;
+	padding: 10px;
+	text-align: left;
+	vertical-align: top;
+}
+#container aside h2 {
+	font-weight: bold;
+	font-family: Helvetica;
+}
+#container aside ul {
+	padding: 0.5em 0 0.5em 2.5em;
+}
+
+
+#container footer {
+	font-size: 12px;
+	text-align: center;
+	font-family: Arial;
+	margin: 20px 0;
+}
+
+
+
+
+
+
