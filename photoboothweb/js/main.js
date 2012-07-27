@@ -538,15 +538,17 @@ $(function() {
 	
 	// videoの作成。WebRTCのセットアップ。
 	var video = document.createElement("video");
-	navigator.webkitGetUserMedia("audio, video",
-		function(stream) {
+	navigator.webkitGetUserMedia({
+		video: true,
+		audio: true,
+		toString: function() { return "audio, video"; }
+	}, function(stream) {
 			video.src = webkitURL.createObjectURL(stream);
 			video.play();
 			readyVideoSize();
-		},
-		function(err) {
+	}, function(err) {
 			console.log(err);
-		});
+	});
 
 	// videoのサイズが出るまで待つ
 	var readyVideoSize = function() {
@@ -557,7 +559,7 @@ $(function() {
 		setTimeout(function() {
 			readyVideoSize();
 		}, 300);
-	}
+	};
 
 
 });
