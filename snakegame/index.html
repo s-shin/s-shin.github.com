@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8" />
+		<title>Snake Game by $.processing</title>
+		<script src="js/jquery.js"></script>
+		<script src="js/processing.js"></script>
+		<script src="js/jquery.processing.js"></script>
+		<script src="js/snake.logic.js"></script>
+		<script src="js/snake.scene.js"></script>
+		<script>
+$(function() {
+	$("#content canvas").processing("framework", new scene.Start);
+});
+		</script>
+		<style>
+body { font-family: Helvetica; font-size: smaller; text-align: center; }
+h1 { padding: 0.5em 0; }
+#content canvas { border: 1px solid #AAA; }
+footer { padding: 0.5em 0; font-size: 0.8em; color: #888; }
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>Snake Game</h1>
+			<p>This is a sample project for <a href="https://github.com/s-shin/jquery.processing.js">$.processing</a>
+		</header>
+		<div id="content">
+			<canvas></canvas>
+		</div>
+		<footer>
+			<p>&copy; 2012 shin - s2pch.luck@gmail.com</p>
+		</footer>
+	</body>
+</html>
+
