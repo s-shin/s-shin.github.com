@@ -1,0 +1,144 @@
+@charset "utf-8";
+
+@font-face {
+	font-family: Awesome;
+	src: url("res/fontawesome-webfont.woff");
+}
+
+body {
+	background: url("res/tex.png");
+	font-size: 13px; *font-size: smaller;
+	color: #FFF;
+	text-shadow: 1px 1px 1px black;
+	font-family: "American Typewriter", Courier;
+}
+
+header, footer {
+	position: fixed;
+	width: 100%;
+	left: 0;
+}
+header {
+	top: 0;
+}
+footer {
+	bottom: 0;
+}
+header > h1, footer > p {
+	font-size: 0.9em;
+	padding: 0.5em 0.7em;
+	margin: 0;
+	font-weight: normal;
+	opacity: 0.75;
+	text-align: right;
+}
+
+header nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+header nav span {
+	position: absolute;
+	display: inline-block;
+	border-radius: 100%;
+	background-color: rgba(255, 255, 255, 0.3);
+	width: 1.6em;
+	height: 0px;
+	padding-top: 1.6em;
+	overflow: hidden;
+	text-shadow: 0 0 0;
+	color: #000;
+}
+header nav span:hover {
+	background-color: rgba(255, 255, 255, 0.9);
+	color: #000;
+}
+header nav span:before {
+	display: block;
+	position: absolute;
+	overflow: hidden;
+	text-align: center;
+	font-size: 1em;
+	font-family: Awesome;
+}
+header nav span.playStop {
+	top: 0.5em;
+	left: 0.7em;
+}
+header nav span.config {
+	top: 2.8em;
+	left: 0.7em;
+}
+header nav span.playStop:before {
+	content: "\f04b";
+	font-size: 1.1em;
+	top: 0.4em;
+	left: 0.4em;
+}
+header nav span.playStop.playing:before {
+	content: "\f04d";
+	font-size: 1.0em;
+	top: 0.4em;
+	left: 0.41em;
+}
+header nav span.config:before {
+	content: "\f085";
+	font-size: 1.2em;
+	top: 0.32em;
+	left: 0.19em;
+}
+
+header div.configArea {
+	background-color: rgba(0, 0, 0, 0.7);
+	position: absolute;
+	width: 200px;
+	top: 2.6em;
+	left: 2.8em;
+	padding: 0.5em 1.5em;
+	display: none;
+}
+header div.configArea section {
+	margin: 1em 0;
+}
+header div.configArea section h1 {
+	font-size: 1em;
+	margin: 0 0 0.3em;
+}
+header div.configArea section.width h1 {
+	margin-bottom: 0.7em;
+}
+header div.configArea section.width div {
+	display: block;
+	width: 90%;
+	margin: 0 auto;
+}
+
+#content {
+	width: 900px;
+	margin: 2em auto;
+	word-break: break-all;
+	letter-spacing: 1px;
+	line-height: 1.6;
+	font-size: 2.5em;
+}
+#content.guide span.d10 {
+	border-right: 1px #777 dotted;
+}
+#content.guide span.d50 {
+	position: relative;
+	border-right: 1px #AAA solid;
+}
+#content.guide span.d50:before {
+	position: absolute;
+	content: attr(data-digits);
+	right: 0;
+	top: -1.05em;
+	font-size: 0.3em;
+	color: #AAA;
+	display: inline-block;
+	width: 100em;
+	text-align: right;
+}
+
+
