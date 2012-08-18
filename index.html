@@ -6,13 +6,18 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="css/bootstrap.css" />
 		<link rel="stylesheet" href="css/bootstrap-responsive.css" />
+		<link rel="stylesheet" href="css/font-awesome.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		<script src="js/bootstrap.js"></script>
 		<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->		
 		<style>
+body { background: url("img/bg.png") repeat-x; border-top: 5px solid #000; }
 #overview h1 { text-align: center; font-size: 4em; margin: 1em; }
 #overview .subnav { text-align: center; }
 #overview .subnav ul { display: inline-block; }
+#works .thumbnail .caption h5 { text-align: center; }
 		</style>
 	</head>
 	<body>
@@ -30,19 +35,40 @@
 				<header class="page-header">
 					<h1>Works</h1>
 				</header>
-				<ul>
-					<li><a href="photoboothweb">Photo Booth on the Web</a></li>
-					<li><a href="snakegame">Snake Game by $.processing</a></li>
-					<li><a href="nagamerupi">Nagameru Pi</a></li>
-				</ul>
+				<div class="thumbnails">
+					<section class="span4">
+						<a class="thumbnail" href="http://s-shin.github.com/photoboothweb/" target="_blank">
+							<img src="img/photoboothweb.png" />
+							<div class="caption">
+								<h5>Photo Booth on the Web</h5>
+							</div>
+						</a>
+					</section>
+					<section class="span4">
+						<a class="thumbnail" href="http://s-shin.github.com/snakegame/" target="_blank">
+							<img src="img/snakegame.png" />
+							<div class="caption">
+								<h5>Snake Game by $.processing</h5>
+							</div>
+						</a>
+					</section>
+					<section class="span4">
+						<a class="thumbnail" href="http://s-shin.github.com/nagamerupi/" target="_blank">
+							<img src="img/nagamerupi.png" />
+							<div class="caption">
+								<h5>Nagameru Pi</h5>
+							</div>
+						</a>
+					</section>
+				</div>
 			</section>
-			<section>
+			<section id="links">
 				<header class="page-header">
 					<h1>Links</h1>
 				</header>
-				<ul>
-					<li><a href="https://github.com/s-shin">github</a></li>
-					<li><a href="http://shin.hateblo.jp/">blog(ja)</a></li>
+				<ul class="unstyled">
+					<li><i class="icon-github"></i><a href="https://github.com/s-shin" target="_blank">github</a></li>
+					<li><i class="icon-pencil"></i><a href="http://shin.hateblo.jp/" target="_blank">blog(ja)</a></li>
 				</ul>
 			</section>
 		</div>
