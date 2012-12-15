@@ -1,0 +1,97 @@
+@charset "utf-8";
+
+* { margin: 0; padding: 0; }
+h1, h2, h3, h4, h5, h6 { font-size: 1em; font-weight: normal; }
+small { font-size: 1em; }
+
+/*
+@font-face {
+	font-family: "hkgokukaikk";
+	src: url("hkgokukaikk.ttf");
+}
+*/
+
+body {
+	text-align: center;
+	/* font-family: Verdana, Meiryo; */
+	font-family: "HGS行書体", HiraMinPro-W6, Serif;
+	line-height: 1.5;
+	background-color: #FAFAFA;
+}
+header h1 {
+	display: inline-block;
+	margin: 0.8em;
+	padding: 0.05em 1em;
+	font-size: 2em;
+	border-radius: 2em;
+	background-color: #FFF;
+	text-shadow: 0px 0px 3px #AAA;
+	box-shadow: inset 0px 0px 5px #555, 0px 0px 5px #AAA;
+}
+footer p {
+	padding: 1em;
+	font-size: 0.7em;
+}
+#shogi {
+	display: inline-block;
+	cursor: pointer;
+	font-size: 25px;
+	padding: 0 10px;
+	background-color: #FC9;
+	box-shadow: 1px 1px 3px #666;
+}
+#shogi #dai1 {
+	-moz-transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+}
+#shogi .dai {
+	display: inline-block;
+}
+#shogi .dai .shogi-active-koma {
+	color: red;
+}
+#shogi .dai span {
+	margin: 0 0.2em;
+}
+#shogi div {
+	font-size: 0.7em;
+	height: 2em;
+	line-height: 2em;
+	background-color: #FC9;
+}
+#shogi table {
+	border-collapse: collapse;
+	background-color: #FC9;
+	border: solid 2px #000;
+}
+#shogi td {
+	border: solid 1px #000;
+	width: 1.5em;
+	height: 1.5em;
+	padding: 0;
+	margin: 0;
+}
+#shogi td.shogi-koma-nkyo,
+#shogi td.shogi-koma-nkei,
+#shogi td.shogi-koma-ngin {
+	font-size: 0.5em;
+}
+#shogi td span {
+	display: inline-block;
+	width: 100%;
+}
+#shogi td.shogi-side-uwate span {
+	-moz-transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+}
+#shogi td.shogi-active-koma {
+	background-color: #EB8;
+}
+#shogi td.shogi-active-kiki {
+	background-color: #CA7;
+}
+
+
+
+
+

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8" />
+		<title>HatenaPlus.js</title>
+		<link rel="stylesheet" href="google-code-prettify/prettify.css" />
+		<script src="google-code-prettify/prettify.js"></script>
+		<script src="jquery.js"></script>
+		<script src="../HatenaPlus-min.js"></script>
+		<script src="main.js"></script>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<header>
+			<h1>HatenaPlus.js</h1>
+			<ul>
+				<li><span class="code" title="see the converted HTML code">H</span></li>
+				<li><span class="help" title="see the cheat sheet">?</span></li>
+			</ul>
+			<div class="cheat-sheet"></div>
+		</header>
+		<div id="content">
+			<div>
+				<textarea>
+*HatenaPlus.js [[url:../HatenaPlus.js:title=Download]]
+-HatenaPlus.js
+-Version 1.0.0
+-Copyright &amp;copy; 2011 shin
+--[mailto:s2pch.luck@gmail.com]
+-Apache License 2.0
+--[http://www.apache.org/licenses/LICENSE-2.0.html]
+
+**その昔...
+[http://tech.nitoyon.com/javascript/application/texthatena/download.html:title=text-hatena.js]というものがあり、CPANのText::Hatenaモジュールは既に移植されているわけですが、CPANに上げられている[http://search.cpan.org/dist/Text-Hatena/:title=Text::Hatena-0.20]自体が古い実装で、残念ながら今のはてなダイアリーで利用されているはてな記法とは互換性がありません。よってtext-hatena.jsも互換性ありません。
+
+そこで徒然なるままに作成したのが、このHatenaPlus.jsです。なぜPlusなのかというと、自分がよく使う記法と欲しい機能を<em>欲望に忠実に勝手に適当に</em>実装しているためです。
+
+ちなみにPerlであれば[https://github.com/cho45/Text-Xatena:title=Text::Xatena]という、すばらしい実装があります。良識のある皆さんはそちらを使いましょう。
+
+**はてな記法との違い
+-http記法、mail記法
+--[]で囲まないとリンクにならない。
+--title自動補完は(JavaScriptの制約上)できない。
+---Ajaxで出来なくはないけれども…
+--barcode, imageは現時点ではサポートしてない。
+---なんとなく面倒なので…
+--他の細々としたリンク系記法(niconico, google, ...)はサポートしていない
+-引用記法のURLも[]を付けなければリンクにはならない。
+--インライン系の記法のパースを行なっているため。文末脚注記法は使わないほうが良いでしょう。
+-スーパーpre記法は[http://code.google.com/p/google-code-prettify/:title=google-code-prettify]との連携を想定している。
+--code要素のclass属性が"language-言語"となる。
+-空行でp区切り、改行はbrになる。((はてブロでは標準でそうなってる))
+-文末脚注記法はかなり手抜き。
+-独自の記法
+--ノート記法
+---余談や脚注・コメントとしての使用を想定。
+--タグ記法
+---上手く使うことで任意のブロックを作れます。
+--インラインコード記法
+---文中にコードを埋め込むための記法です。
+--相対リンク記法
+---``[url:～～]``で任意のURLを指定できます。
+
+**Appendix
+おまけ。
+
+***Mini Scripts
+実際に実装に使った細々とした関数。
+
+****Pythonライクな手抜き``format``関数
+>|js|
+var format = function(str) {
+	for (var i = 1, len = arguments.length; i < len; ++i)
+		str = str.split("{"+(i-1)+"}").join(arguments[i]);
+	return str;
+}
+||<
+****PHPライクの``htmlspecialchars``関数
+>|js|
+var htmlspecialchars = function(str) {
+	var pre = document.createElement("pre");
+	pre.textContent = str;
+	return pre.innerHTML;
+}
+||<
+****``replaceAll``関数
+>|js|
+var replaceAll = function(str, re, newstr) {
+	return str.split(re).join(newstr);
+}
+||<
+
+**Reference
+:はてなダイアリー公式のはてな記法一覧:[http://hatenadiary.g.hatena.ne.jp/keyword/%E3%81%AF%E3%81%A6%E3%81%AA%E8%A8%98%E6%B3%95%E4%B8%80%E8%A6%A7]
+
+				</textarea>
+			</div>
+			<div class="hatena"></div>
+		</div>
+		<footer>
+			<p><small>&copy; 2011 shin</small></p>
+		</footer>
+	</body>
+</html>
+

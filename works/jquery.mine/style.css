@@ -1,0 +1,81 @@
+
+* { margin: 0; padding: 0; }
+
+body {
+	padding: 20px;
+	font-family: Meiryo;
+	text-align: center;
+	line-height: 1.5;
+}
+
+input[type="button"] {
+	padding: 0.5em 1em;
+}
+h1 {
+	font-size: 130%;
+	line-height: 1.0;
+	margin-bottom: 0.5em;
+}
+h1 span {
+	font-size: 60%;
+}
+p {
+	padding: 5px 0px;
+}
+#mine {
+	display: inline-block;
+}
+#status {
+	margin: 0.5em;
+}
+
+/* Mine */
+
+#mine table {
+	border: solid 1px #EEE;
+	cursor: default;
+}
+/*
+#mine table.mine-checkMode-flag {
+	background-color: #F00;
+}
+#mine table.mine-checkMode-question {
+	background-color: #0F0;
+}
+*/
+#mine table.mine-isGameOver td.mine-isBomb {
+	background-color: #000;
+}
+#mine td {
+	width: 15px;
+	height: 15px;
+	background-color: #EEE;
+	font-size: 12px;
+	line-height: 15px;
+	text-align: center;
+	font-family: Consolas, Arial;
+}
+#mine td.mine-isFlag {
+	/* background-color: #CCC; */
+}
+#mine td.mine-opened {
+	background-color: #DDD;
+}
+#mine td.mine-opened.mine-bombsAround-1 {
+	color: #00F;
+}
+#mine td.mine-opened.mine-bombsAround-2 {
+	color: #0F0;
+}
+#mine td.mine-opened.mine-bombsAround-3 {
+	color: #F00;
+}
+#mine td.mine-opened.mine-bombsAround-4 {
+	color: #FF0;
+}
+
+/* DEBUG
+#mine td.mine-isBomb {
+	background-color: #FFF;
+}
+*/

@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+* { margin: 0; padding: 0; }
+
+body {
+	padding: 20px;
+	font-size: 13px;
+	font-family: Optima;
+	line-height: 1.5;
+}
+h1 {
+	text-align: center;
+	font-size: 40px;
+	font-weight: normal;
+}
+
+.lifegame table {
+	margin: 0px auto;
+	border-collapse: collapse;
+	border: 1px solid #AAA;
+}
+.lifegame tr {
+	width: 100%;
+}
+.lifegame td {
+	width: 5px;
+	height: 5px;
+	background-color: #000;
+}
+.lifegame td.life {
+	background-color: #FFF;
+}
+
+.content {
+	text-align: center;
+	margin: 1em;
+}
+.content span {
+	display: inline-block;
+	padding: 0.5em 1em;
+	margin: 0 0.5em;
+	background-color: #000;
+	color: #FFF;
+	border: 1px solid #000;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.content span:hover {
+	color: #000;
+	background-color: #FFF;
+}
+.content input {
+	padding: 0.5em;
+	margin: 0 0.5em;
+	width: 3em;
+}
+
+.phase1 {
+	display: block;
+}
+.phase2 {
+	display: none;
+}
+.phase2 .control {
+	margin: 1em 0;
+}
+
+footer {
+	text-align: center;
+}
+footer p small {
+	font-size: 0.9em;
+}
+

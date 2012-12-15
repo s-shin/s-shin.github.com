@@ -5,7 +5,9 @@
 		<title>s-shin.github.com</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="css/bootstrap.css" />
+		<!--
 		<link rel="stylesheet" href="css/bootstrap-responsive.css" />
+		-->
 		<link rel="stylesheet" href="css/font-awesome.css" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 		<script src="js/bootstrap.js"></script>
@@ -13,65 +15,146 @@
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->		
 		<style>
-body { background: url("img/bg.png") repeat-x; border-top: 5px solid #000; }
-#overview h1 { text-align: center; font-size: 4em; margin: 1em; }
-#overview .subnav { text-align: center; }
-#overview .subnav ul { display: inline-block; }
-#works .thumbnail .caption h5 { text-align: center; }
+body { border: 1px solid #000; border-width: 10px 0 0; }
+#overview { text-align: center; }
+#overview h1 { font-size: 3em; line-height: 2; margin: 0.5em auto; width: 50%; border-bottom: 1px solid #000; }
+.thumbnails { margin-bottom: 13px; }
+.thumbnail .caption h5 { text-align: center; }
+#works .thumbnails p { height: 150px; overflow: hidden; margin: 0; }
+
+footer { text-align: center; background-color: #EEE; margin-top: 30px; padding: 1em; border-top: 1px #DDD solid; }
+footer small { font-size: 0.9em; }
 		</style>
 	</head>
 	<body>
 		<div class="container">
 			<header id="overview">
 				<h1>s-shin.github.com</h1>
-				<nav class="subnav">
-					<ul class="nav nav-pills">
-						<li><a href="#works">Works</a></li>
-						<li><a href="#links">Links</a></li>
-					</ul>
-				</nav>
 			</header>
-			<section id="works">
-				<header class="page-header">
-					<h1>Works</h1>
-				</header>
-				<div class="thumbnails">
-					<section class="span4">
-						<a class="thumbnail" href="http://s-shin.github.com/photoboothweb/" target="_blank">
-							<img src="img/photoboothweb.png" />
-							<div class="caption">
-								<h5>Photo Booth on the Web</h5>
-							</div>
-						</a>
+			<div class="row-fluid">
+				<div class="span9">
+					<section id="works">
+						<header class="page-header">
+							<h1>Trivial Works <small>ちょっとしたもの</small></h1>
+						</header>
+						<div class="thumbnails row-fluid">
+							<section class="span4">
+								<a class="thumbnail" href="works/photoboothweb" target="_blank">
+									<p><img src="img/works/photoboothweb.png" /></p>
+									<div class="caption">
+										<h5>Photo Booth on the Web</h5>
+									</div>
+								</a>
+							</section>
+							<section class="span4">
+								<a class="thumbnail" href="works/snakegame/" target="_blank">
+									<p><img src="img/works/snakegame.png" /></p>
+									<div class="caption">
+										<h5>Snake Game by $.processing</h5>
+									</div>
+								</a>
+							</section>
+							<section class="span4">
+								<a class="thumbnail" href="works/nagamerupi/" target="_blank">
+									<p><img src="img/works/nagamerupi.png" /></p>
+									<div class="caption">
+										<h5>Nagameru Pi</h5>
+									</div>
+								</a>
+							</section>
+						</div>
+						<div class="thumbnails row-fluid">
+							<section class="span4">
+								<a class="thumbnail" href="works/ddhighlighter/" target="_blank">
+									<p><img src="img/works/ddhighlighter.png" /></p>
+									<div class="caption">
+										<h5>Drag &amp; Drop Syntax Highlighter</h5>
+									</div>
+								</a>
+							</section>
+							<section class="span4">
+								<a class="thumbnail" href="works/lifegame-js/" target="_blank">
+									<p><img src="img/works/lifegame.png" /></p>
+									<div class="caption">
+										<h5>Life Game</h5>
+									</div>
+								</a>
+							</section>
+							<section class="span4">
+								<a class="thumbnail" href="works/hatenap/sample/" target="_blank">
+									<p><img src="img/works/hatenap.png" /></p>
+									<div class="caption">
+										<h5>Hatena(+) Syntax Parser</h5>
+									</div>
+								</a>
+							</section>
+						</div>
+						<div class="thumbnails row-fluid">
+							<section class="span4">
+								<a class="thumbnail" href="works/jquery.mine/" target="_blank">
+									<p><img src="img/works/mine.png" /></p>
+									<div class="caption">
+										<h5>MineSweeper (jquery.mine.js)</h5>
+									</div>
+								</a>
+							</section>
+						</div>
 					</section>
-					<section class="span4">
-						<a class="thumbnail" href="http://s-shin.github.com/snakegame/" target="_blank">
-							<img src="img/snakegame.png" />
-							<div class="caption">
-								<h5>Snake Game by $.processing</h5>
-							</div>
-						</a>
-					</section>
-					<section class="span4">
-						<a class="thumbnail" href="http://s-shin.github.com/nagamerupi/" target="_blank">
-							<img src="img/nagamerupi.png" />
-							<div class="caption">
-								<h5>Nagameru Pi</h5>
-							</div>
-						</a>
+					<section id="works2">
+						<header class="page-header">
+							<h1>Other Works</h1>
+						</header>
+						<div class="thumbnails row-fluid">
+							<section class="span4">
+								<a class="thumbnail" href="https://github.com/s-shin/xv6-network" target="_blank">
+									<div class="caption">
+										<h5>Xv6 with Network</h5>
+									</div>
+								</a>
+							</section>
+							<section class="span4">
+								<a class="thumbnail" href="https://github.com/s-shin/jquery.processing.js" target="_blank">
+									<div class="caption">
+										<h5>jquery.processing.js</h5>
+									</div>
+								</a>
+							</section>
+							<section class="span4">
+								<a class="thumbnail" href="https://github.com/s-shin/jsnake" target="_blank">
+									<div class="caption">
+										<h5>JSnake</h5>
+									</div>
+								</a>
+							</section>
+						</div>
 					</section>
 				</div>
-			</section>
-			<section id="links">
-				<header class="page-header">
-					<h1>Links</h1>
-				</header>
-				<ul class="unstyled">
-					<li><i class="icon-github"></i><a href="https://github.com/s-shin" target="_blank">github</a></li>
-					<li><i class="icon-pencil"></i><a href="http://shin.hateblo.jp/" target="_blank">blog(ja)</a></li>
-				</ul>
-			</section>
+				<div class="span3">
+					<!--
+					<section id="profile">
+						<header class="page-header">
+							<h1>Profile</h1>
+						</header>
+					</section>
+					-->
+					<section id="links">
+						<header class="page-header">
+							<h1>Links</h1>
+						</header>
+						<ul>
+							<li><a href="http://shin.hateblo.jp/" target="_blank">blog</a></li>
+							<li><a href="https://github.com/s-shin" target="_blank">github</a>, <a href="https://gist.github.com/s-shin">gist</a></li>
+							<li><a href="http://jsdo.it/s-shin/codes" target="_blank">jsdo.it</a></li>
+						</ul>
+					</section>
+				</div>
+			</div>
 		</div>
+		<footer>
+			<a href="https://github.com/s-shin/s-shin.github.com"><small>source of this site</small></a>
+			<br />
+			<small>&copy; 2012 shin &lt;s2pch.luck at gmail.com&gt;</small>
+		</footer>
 	</body>
 </html>
 

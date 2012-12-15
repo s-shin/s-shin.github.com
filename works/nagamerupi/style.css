@@ -97,6 +97,7 @@ header div.configArea {
 	left: 2.8em;
 	padding: 0.5em 1.5em;
 	display: none;
+	z-index: 2;
 }
 header div.configArea section {
 	margin: 1em 0;
@@ -117,7 +118,8 @@ header div.configArea section.width div {
 #content {
 	width: 900px;
 	margin: 2em auto;
-	word-break: break-all;
+	word-break: break-all; /* Fx15で対応らしい */
+	/* word-wrap: break-word; Fx用。しかし下のafterと併用でバグるのでやめる。 */
 	letter-spacing: 1px;
 	line-height: 1.6;
 	font-size: 2.5em;
@@ -129,7 +131,8 @@ header div.configArea section.width div {
 	position: relative;
 	border-right: 1px #AAA solid;
 }
-#content.guide span.d50:before {
+/* beforeだと改行時にバグが起きる(確認Fx/GC)（何故？） */
+#content.guide span.d50:after {
 	position: absolute;
 	content: attr(data-digits);
 	right: 0;
@@ -141,4 +144,17 @@ header div.configArea section.width div {
 	text-align: right;
 }
 
-
+@-moz-document url-prefix() {
+/* いじられたくない設定を無効化 */
+/* afterで単語区切りになる性質を利用し、word-wrapなどを使わず改行させる */
+	header div.configArea section.width {
+		display: none;
+	}
+	header div.configArea section.guide {
+		display: none;
+	}
+/* カーニングの都合でCourier優先 */
+	body {
+		font-family: Courier, "American Typewriter";
+	}
+}

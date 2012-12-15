@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8" />
+		<title>MineSweeper on Browser</title>
+		<script src="jquery.min.js"></script>
+		<script src="jquery.mine.js"></script>
+		<script src="main.js"></script>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<h1>MineSweeper<br /><span>on Browser</span></h1>
+		<div id="setup">
+			<p>Please select the game level</p>
+			<p>
+				Width*Height: <select class="size">
+					<option>10*10</option>
+					<option>20*20</option>
+					<option>40*40</option>
+				</select>
+			</p>
+			<p>
+				Rate of Bombs: <select class="rate">
+					<option>10%</option>
+					<option>20%</option>
+					<option>30%</option>
+				</select>
+			</p>
+			<p><input type="button" value="OK" /></p>
+		</div>
+		<div id="game">
+			<div id="message"></div>
+			<div id="status">
+				T:[<span>-</span>] B:[<span>-</span>]
+			</div>
+			<div id="mine"></div>
+			<div id="checkMode">
+				<label><input type="radio" name="checkMode" />OPEN</label>
+				<label><input type="radio" name="checkMode" />FLAG</label>
+				<label><input type="radio" name="checkMode" />QUESTION</label>
+			</div>
+		</div>
+	</body>
+</html>
