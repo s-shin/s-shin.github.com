@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>Simple Example</title>
+    <script src="../../parze.js"></script>
+    <script>
+window.addEventListener("load", function() {
+	var $ = function(id) { return document.getElementById(id); }
+	var p = new Parze();
+	p.registerBlock({
+		head: {
+			re: /^(\*+)(.*)$/,
+			parse: function(handle) {
+				var t = handle.get();
+				var m = t.match;
+				return Parze.Util.format(
+					"<h{0}>{1}</h{0}>", m[1].length, m[2]);
+			}
+		},
+		normal: {
+			re: /^.*$/,
+			parse: function(handle) {
+				var t = handle.get();
+				return "<p>" + t.str + "</p>";
+			}
+		}
+	});
+	$("dst").innerHTML = p.parse($("src").textContent);
+});
+    </script>
+  </head>
+  <body>
+    <textarea id="src">
+*Simple Example
+**parze.jsとは
+parze.jsは簡易マークアップ言語を作成するためのライブラリです。
+**parze.jsの特徴
+正規表現と処理の組みを書くだけ。
+作成した記法は簡単にプラグインとして登録できる。
+    </textarea>
+    <div id="dst"></div>
+  </body>
+</html>
+

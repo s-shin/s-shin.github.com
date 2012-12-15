@@ -1,0 +1,340 @@
+
+*HatenaPlus Cheat Sheet
+
+**見出し記法【``*～～``】
+>||
+*見出し
+**小見出し
+***小小見出し
+**小見出し2
+||<
+<span>↓</span> 
+>|html|
+<section>
+	<h3>見出し</h3>
+	<div>
+		<section>
+			<h4>小見出し</h4>
+			<div>
+				<section>
+					<h5>小小見出し</h5>
+					<div></div>
+				</section>
+			</div>
+		</section>
+		<section>
+			<h4>小見出し2</h4>
+			<div></div>
+		</section>
+	</div>
+</section>
+||<
+<span>↓</span> 
+<div class="hatena"><!-- converted data --></div>
+<span>=========</span> 
+
+**段落記法【``文章``】
+>||
+通常の文章が段落記法に相当します。
+ただの改行は改行タグbrになります。
+
+段落を変えたい場合は空行を入れます。
+この点がオリジナルのはてな記法とは異なります。
+||<
+<span>↓</span> 
+>|html|
+<p>通常の文章が段落記法に相当します。<br />
+ただの改行は改行タグbrになります。</p>
+<p>段落を変えたい場合は空行を入れます。<br />
+この点がオリジナルのはてな記法とは異なります。</p>
+||<
+<span>↓</span> 
+<div class="hatena"><!-- converted data --></div>
+<span>=========</span> 
+
+**リスト記法【``-～～, +～～, -+～～``】
+>||
+-箇条書きリスト(ul)
+--ulのネスト
+--同じ階層が連続した場合、一つのリストとみなされます。
+-+これは文法違反ですが、強制的に連続したリストとみなされます。
+
++順番付きリスト(ol)
+++順番付きリストのネスト
++２番目の項目
+||<
+<span>↓</span> 
+>|html|
+<ul>
+	<li>箇条書きリスト(ul)</li>
+	<li>ulのネスト
+		<ul>
+			<li>同じ階層が連続した場合、一つのリストとみなされます。</li>
+			<li>これは文法違反ですが、強制的に連続したリストとみなされます。</li>
+		</ul>
+	</li>
+</ul>
+<ol>
+	<li>順番付きリスト(ol)
+		<ul><li>順番付きリストのネスト</li></ul></li>
+	<li>２番目の項目</li>
+</ol>
+||<
+<span>↓</span> 
+<div class="hatena"><!-- converted data --></div>
+<span>=========</span> 
+
+**定義リスト記法【``:～～:～～``】
+>||
+:定義名:説明を書きます。改行は出来ません。
+:定義名:連続して書けば一つの定義リストとみなされます。
+||<
+<span>↓</span> 
+>|html|
+<dl>
+	<dt>定義名</dt>
+	<dd>説明を書きます。改行は出来ません。</dd>
+	<dt>定義名</dt>
+	<dd>連続して書けば一つの定義リストとみなされます。</dd>
+</dl>
+||<
+<span>↓</span> 
+<div class="hatena"><!-- converted data --></div>
+<span>=========</span> 
+
+**テーブル記法【``|*～～|～～|``】
+>||
+|*テーブルの|*見出し|*です|
+|普通の|項目|です|
+|何もない|||||部分は|無視されます|
+||<
+<span>↓</span> 
+>|html|
+<table>
+	<tr>
+		<th>テーブルの</th><th>見出し</th><th>です</th>
+	</tr>
+	<tr>
+		<td>普通の</td><td>項目</td><td>です</td>
+	</tr>
+	<tr>
+		<td>何もない</td><td>項目は</td><td>無視されます</td>
+	</tr>
+</table>
+||<
+<span>↓</span> 
+<div class="hatena"><!-- converted data --></div>
+<span>=========</span> 
+
+**引用記法【``>URL> ～～ <<``】
+>||
+>>
+引用ブロックです。
+<<
+>[http://www.google.co.jp]>
+urlを&gt;の間に入れるとciteが自動で付加されます。
+url欄もパースされるので、アンカーにしたい場合は[]で囲む必要があります。
+<<
+||<
+<span>↓</span> 
+>|html|
+<blockquote><p>引用ブロックです。</p></blockquote>
+<blockquote cite="http://www.google.co.jp">
+	<p>
+urlを&gt;の間に入れるとciteが自動で付加されます。<br />
+url欄もパースされるので、アンカーにしたい場合は[]で囲む必要があります。
+	</p>
+	<cite><a href="http://www.google.co.jp">http://www.google.co.jp</a></cite>
+</blockquote>
+||<
+<span>↓</span> 
+<div class="hatena"><!-- converted data --></div>
+<span>=========</span> 
+
+**pre記法【``>| ～～ |<``】
+>||
+>|
+preで囲まれます。
+この間はパースされます。
+|<
+||<
+<span>↓</span> 
+>|html|
+<pre>
+	<p>
+preで囲まれます。<br />
+この間はパースされます。
+	</p>
+</pre>
+||<
+<span>↓</span> 
+<div class="hatena"><!-- converted data --></div>
+<span>=========</span> 
+
+**スーパーpre記法【``>|言語| ～～ ||<``】
+>||
+>|c|
+#include <stdio.h>
+int main() {
+	puts("preとcodeで囲まれます。");
+	puts("この間はパースされません。");
+	puts("特殊文字はエスケープされます。");
+	return;
+}
+||< 
+||<
+<!--
+スーパーpre記法のネストのために、
+スーパーpre内の"||< "は自動的に"||<"に変換されます。
+-->
+<span>↓</span> 
+>|html|
+<pre><code class="languate-c">
+#include &lt;stdio.h&gt;
+int main() {
+	puts("preとcodeで囲まれます。");
+	puts("この間はパースされません。");
+	puts("特殊文字はエスケープされます。");
+	return;
+}
+</code></pre>
+||<
+<span>↓</span> 
+<div class="hatena"><!-- converted data --></div>
+<span>=========</span> 
+
+**下書き記法【``<!-- ～～ -->``】
+>||
+<!--
+この区間に描いたものは、完全に無視されます。
+-->
+||<
+<span>↓</span> 
+>|html|
+||<
+<span>↓</span> 
+<div class="hatena"><!-- converted data --></div>
+<span>=========</span> 
+
+**タグ記法【``<～～>``】
+>||
+<div style="color: #A00;">
+行頭が<、行末が>で終わる行はパースされません。
+HatenaPlus.jsオリジナルの記法です。
+</div>
+||<
+<span>↓</span> 
+>|html|
+<div style="color: #A00;">
+<p>行頭が<、行末が>で終わる行はパースされません。<br />
+HatenaPlus.jsオリジナルの記法です。</p>
+</div>
+||<
+<span>↓</span> 
+<div class="hatena"><!-- converted data --></div>
+<span>=========</span> 
+
+**ノート記法【``># ～～ #<``】
+>||
+>#
+ちょっとしたコメントや注釈を書きます。
+HatenaPlus.jsオリジナルの記法です。
+#<
+||<
+<span>↓</span> 
+>|html|
+<aside>
+<p>ちょっとしたコメントや注釈を書きます。<br />
+HatenaPlus.jsオリジナルの記法です。</p>
+</aside>
+||<
+<span>↓</span> 
+<div class="hatena"><!-- converted data --></div>
+<span>=========</span> 
+
+**インラインタグ記法【``<タグ>～～</タグ>``】
+>||
+<span style="font-weight: bold;">行内のタグ</span>はそのまま表示されますが、
+<em>タグで始まりタグで終わる場合はタグ記法になってしまうので</em>
+<em>タグ記法にしたくない場合は行末にスペースを入れるなどの工夫が必要です。</em> 
+||<
+<span>↓</span> 
+>|html|
+<p><span style="font-weight: bold;">行内のタグ</span>はそのまま表示されますが、</p>
+<em>タグで始まりタグで終わる場合はタグ記法になってしまうので</em>
+<p><em>タグ記法にしたくない場合は行末にスペースを入れるなどの工夫が必要です。</em> </p>
+||<
+<span>↓</span> 
+<div class="hatena"><!-- converted data --></div>
+<span>=========</span> 
+
+**インラインコード記法【<code>&#x0060;&#x0060;～～&#x0060;言語&#x0060;</code>】
+>||
+``２個のバッククォートで囲みます。<em>エスケープもされます。</em>``
+``/*言語の指定も出来ます。*/`cpp`
+||<
+<span>↓</span> 
+>|html|
+<p>
+<code>バッククォートで囲みます。&lt;em&gt;エスケープもされます。&lt;/em&gt;</code><br />
+<code class="language-cpp">/*言語の指定も出来ます。*/</code>
+</p>
+||<
+<span>↓</span> 
+<div class="hatena"><!-- converted data --></div>
+<span>=========</span> 
+
+**リンク記法【``[http://～～], [ftp://～～], [mailto:～～], [url:～～]``】
+>||
+http://google.co.jp
+[http://www.google.co.jp]
+[ftp://ftp.gnu.org/]
+[mailto:s2pch.luck@gmail.com]
+[http://www.google.co.jp:title=Google]
+[url:#:title=ページトップヘ]
+||<
+<span>↓</span> 
+>|html|
+<p>
+http://google.co.jp<br />
+<a href="http://www.google.co.jp">http://www.google.co.jp</a><br />
+<a href="ftp://ftp.gnu.org/">ftp://ftp.gnu.org/</a><br />
+<a href="mailto:s2pch.luck@gmail.com">s2pch.luck@gmail.com</a><br />
+<a href="http://www.google.co.jp">Google</a><br />
+<a href="#">ページトップヘ</a>
+</p>
+||<
+<span>↓</span> 
+<div class="hatena"><!-- converted data --></div>
+<span>=========</span> 
+
+**脚注記法【<code>&#x0028;&#x0028;～～&#x0029;&#x0029;</code>】
+>||
+文中で脚注((文末にまとめられる注釈))を入れることができます。((連番が振られます))。
+||<
+<span>↓</span> 
+>|html|
+<p>
+文中で脚注<span class="footnote"><a title="文末にまとめられる注釈" name="fn1" href="#f1">*1</a></span>を入れることができます。<span class="footnote"><a title="連番が振られます" name="fn2" href="#f2">*2</a></span>。
+</p>
+<div class="footnote">
+	<p class="footnote"><a href="#fn1" name="f1">*1</a>：文末にまとめられる注釈</p>
+	<p class="footnote"><a href="#fn2" name="f2">*2</a>：連番が振られます</p>
+</div>
+||<
+<span>↓</span> 
+<div class="hatena"><!-- converted data --></div>
+<span>=========</span> 
+
+<!--
+**
+>||
+||<
+<span>↓</span> 
+>|html|
+||<
+<span>↓</span> 
+<div class="hatena"><!-- converted data --></div>
+<span>=========</span> 
+-->
+

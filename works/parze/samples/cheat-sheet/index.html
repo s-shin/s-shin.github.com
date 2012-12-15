@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8" />
+		<title>parze.js - パルツェ</title>
+		<link rel="stylesheet" href="style.css">
+		<script src="../parze.js"></script>
+		<script src="../parze.hatena.js"></script>
+		<script src="jquery.js"></script>
+		<script src="google-code-prettify/prettify.js"></script>
+		<link rel="stylesheet" href="google-code-prettify/prettify.css" />
+		<script src="main.js"></script>
+		<script>
+/*
+window.addEventListener("load", function() {
+	var b = document.body;
+	var p = Parze.Plugin.load("hatena");
+	p.setText(b.children[0].textContent);
+	p.tokenize();
+	b.innerHTML = p.parse();
+});
+$(function() {
+	$.get("cheat-sheet.txt", function(ret) {
+		var p = Parze.Plugin.load("hatena");
+		p.setText(ret);
+		p.tokenize();
+		document.body.innerHTML = p.parse();
+	});
+});
+*/
+		</script>
+	</head>
+	<body>
+<!--
+		<textarea>
+*parze.js test
+**super pre
+>|c|
+#include <stdio.h>
+
+int main(int argc, char** argv) {
+	if (argc == 2)
+		puts(argv[1]);
+	else
+		printf("Hello, World!!!");
+	return 0;
+}
+||<
+
+**normal text
+Hello.
+
+This is a pen.
+That is a picture.
+
+Goodbye.
+
+**リスト
+-箇条書きリスト
+--箇条書きリストのネスト
+-+文法違反
++番号付きリスト
+++番号付きリストのネスト
+-箇条書きと
+-+番号付きリストのネスト
+
+**定義リスト
+:リスト:普通の箇条書きの際に利用する。番号付きの場合はolを利用する。
+:定義リスト:辞書の「見出し」「内容」が分けられるときに利用する。時々使うが、dt・ddの階層が全て同じなため、若干使いづらいことがある。
+
+**テーブル
+|*見出し|*見出し|
+|項目|項目|
+
+**引用
+>http://ja.wikipedia.org/wiki/%E5%BC%95%E7%94%A8>
+引用（いんよう、英語：citation, quotation[1]）とは、広義には、他人の著作を自己の作品のなかで紹介する行為、先人の芸術作品やその要素を自己の作品に取り入れること。報道や批評、研究などの目的で、自らの著作物に他の著作物の一部を採録したり、ポストモダン建築で過去の様式を取り込んだりすることを指す。狭義には、各国の著作権法の引用の要件を満たして行われる合法な無断転載等[2]のこと。
+<<
+
+**ノート記法
+>#
+この部分はちょっとしかコメントに利用できます。
+#<
+
+**タグ記法
+<div style="color: red">
+この部分はdivで囲まれ、赤字になります。
+</div>
+-->
+
+		</textarea>
+	</body>
+</html>
+
+

@@ -1,0 +1,185 @@
+@charset "utf-8";
+
+* { margin: 0; padding: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+	font-size: 100%;
+	font-weight: inherit;
+}
+textarea {
+	font-size: inherit;
+	font-family: inherit;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	font-family: Helvetica, Arial;
+	font-size: 15px;
+	line-height: 1.5;
+}
+
+#container {
+	height: 100%;
+}
+
+#side {
+	position: relative;
+	z-index: 2;
+	width: 200px;
+	height: 100%;
+	float: left;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+background: #f7f7f7; /* Old browsers */
+background: -moz-linear-gradient(-45deg, #f7f7f7 0%, #e5e5e5 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#f7f7f7), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(-45deg, #f7f7f7 0%,#e5e5e5 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(-45deg, #f7f7f7 0%,#e5e5e5 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(-45deg, #f7f7f7 0%,#e5e5e5 100%); /* IE10+ */
+background: linear-gradient(-45deg, #f7f7f7 0%,#e5e5e5 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#e5e5e5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+#side header {
+	position: relative;
+	margin: 20px 13px;
+}
+#side header:before,
+#side header:after {
+	content: "";
+	position: absolute;
+	z-index: 1;
+	width: 50%;
+	height: 50%;
+	bottom: 5px;
+	box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+}
+#side header:before {
+	left: 5px;
+	-webkit-transform: skew(-6deg) rotate(-6deg);
+}
+#side header:after {
+	right: 5px;
+	-webkit-transform: skew(6deg) rotate(6deg);
+}
+#side h1 {
+	position: relative;
+	z-index: 2;
+	font-size: 20px;
+	text-align: center;
+	background-color: #FFF;
+	border-radius: 0px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+#side h1 a {
+	color: #000;
+	padding: 10px 0;
+	text-decoration: none;
+	display: block;
+}
+#side h1 a:hover {
+	color: #AAA;
+}
+#side h1 span {
+	display: block;
+	font-size: 11px;
+	line-height: 1;
+}
+
+#side ul {
+	list-style: none;
+	margin: 10px 0;
+}
+#side li {
+	text-align: center;
+	margin: 10px 0;
+	line-height: 2;
+}
+#side li a {
+	display: block;
+	color: #777;
+	text-decoration: none;
+	text-shadow: 0 1px #FFF;
+	margin: 0 -2px 0 10px;
+	border-right: 1px solid #FFF;
+}
+#side li a:hover {
+	color: #000;
+}
+#side li a.active {
+	padding-top: 0.1em;
+	background-color: #FFF;
+	box-shadow: 0 4px 3px -3px rgba(0, 0, 0, 0.3) inset;
+	color: #000;
+}
+
+#content {
+	position: relative;
+	z-index: 1;
+	height: 100%;
+	font-size: 13px;
+	font-family: Ricty, Consolas, "VL Gothic";
+	overflow: hidden;
+	-webkit-box-sizing: border-box;
+}
+#content > div {
+	width: 50%;
+	height: 100%;
+	float: left;
+	-webkit-box-sizing: border-box;
+}
+#content > div textarea {
+	width: 100%;
+	height: 100%;
+	padding: 5px;
+	border-width: 0;
+	-webkit-box-sizing: border-box;
+	line-height: 1.5;
+	resize: none;
+	outline: none;
+}
+#content > div.result {
+	padding: 5px;
+	height: 100%;
+	overflow: auto;
+	border-left: 1px #AAA dashed;
+}
+
+.result { font-family: Palatino; word-wrap: break-word; }
+.result h1, .result h2, .result h3, .result h4, .result h5, .result h6 {
+	/* font-family: Helvetica; */
+}
+.result h1 { font-size: 1.9em; }
+.result h2 { font-size: 1.7em; }
+.result h3 { font-size: 1.5em; }
+.result h4 { font-size: 1.3em; }
+.result h5 { font-size: 1.2em; }
+.result h6 { font-size: 1.1em; }
+.result p { margin: 0.2em; }
+.result ul, .result ol { padding-left: 20px; }
+.result pre { font-family: Ricty, Consolas, monospace; font-size: 11px; border: 1px #DDD solid; padding: 0.5em; }
+/*
+.result *:before, .result *:after {
+	display: inline-block;
+	color: #AAA;
+	font-size: 0.7em;
+	margin: 0 0.4em;
+}
+.result h1:before { content: "[h1]"; }
+.result h1:after { content: "[/h1]"; }
+.result h2:before { content: "[h2]"; }
+.result h2:after { content: "[/h2]"; }
+.result h3:before { content: "[h3]"; }
+.result h3:after { content: "[/h3]"; }
+.result h4:before { content: "[h4]"; }
+.result h4:after { content: "[/h4]"; }
+.result h5:before { content: "[h5]"; }
+.result h5:after { content: "[/h5]"; }
+.result h6:before { content: "[h6]"; }
+.result h6:after { content: "[/h6]"; }
+.result p:before { content: "[p]"; }
+.result p:after { content: "[/p]"; }
+*/
+
+
