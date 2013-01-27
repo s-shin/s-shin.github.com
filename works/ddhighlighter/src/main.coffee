@@ -105,7 +105,6 @@ preprocess = (code, tabwidth=null) ->
 
 $ ->
 	content = $ "#content"
-	body = $ "body"
 	target = content.find "pre code.prettyprint"
 
 	print = (code, type) ->
@@ -115,8 +114,9 @@ $ ->
 			t = preprocess code, 4
 		target.html PR.prettyPrintOne(t, type)
 
-
-	body
+	$("body")
+		.bind "dragover", (jqe) ->
+			jqe.preventDefault()
 		.bind "drop", (jqe) ->
 			jqe.preventDefault()
 			e = jqe.originalEvent
@@ -125,7 +125,6 @@ $ ->
 			if type
 				readFile file, (r) -> print r, type
 				info.ddhere.hide()
-
 
 	info =
 		ddhere:

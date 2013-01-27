@@ -151,9 +151,8 @@
   };
 
   $(function() {
-    var body, content, info, print, target;
+    var content, info, print, target;
     content = $("#content");
-    body = $("body");
     target = content.find("pre code.prettyprint");
     print = function(code, type) {
       var t;
@@ -164,7 +163,9 @@
       }
       return target.html(PR.prettyPrintOne(t, type));
     };
-    body.bind("drop", function(jqe) {
+    $("body").bind("dragover", function(jqe) {
+      return jqe.preventDefault();
+    }).bind("drop", function(jqe) {
       var e, file, type;
       jqe.preventDefault();
       e = jqe.originalEvent;
