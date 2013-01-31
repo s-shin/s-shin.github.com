@@ -12,6 +12,12 @@
 		<!--[if IE 7]>
 		<link href="//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome-ie7.css" rel="stylesheet" />
 		<![endif]-->
+		<script>
+$(function() {
+	$("a[rel=popover]").popover();
+	$("a[rel=popover-hover]").popover({trigger: "hover"});
+});
+		</script>
 		<style>
 body { border: 1px solid #000; border-width: 10px 0 0; }
 #overview { text-align: center; }
@@ -22,7 +28,8 @@ header.page-header h1 small { font-size: 0.5em; }
 .thumbnails { margin-bottom: 13px; }
 .thumbnail p { border: 1px dashed #AAA; }
 .thumbnail .caption h5 { text-align: center; font-size: 12px; margin: 0; }
-#works .thumbnails p { height: 150px; overflow: hidden; margin: 0; }
+.works1 .thumbnails p { height: 150px; overflow: hidden; margin: 0; }
+.works h2 { border-left: 10px solid #000; padding-left: 0.4em; }
 
 footer { text-align: center; background-color: #EEE; margin-top: 30px; padding: 1em; border-top: 1px #DDD solid; }
 footer small { font-size: 0.9em; }
@@ -34,14 +41,20 @@ footer small { font-size: 0.9em; }
 				<h1>s-shin.github.com</h1>
 			</header>
 			<div class="row-fluid">
-				<div class="span9">
-					<section id="works">
+				
+				<!-- ### Works ### -->
+				
+				<div class="span9 works">
+					<!-- Works on the Web -->
+					<section class="works1">
 						<header class="page-header">
-							<h1>Trivial Works <small>ちょっとしたもの</small></h1>
+							<h1>Works on the Web <small>Web上で動くもの</small></h1>
 						</header>
+						
+						<h2>Entertainment <small>楽しいもの</small></h2>
 						<div class="thumbnails row-fluid">
 							<section class="span4">
-								<a class="thumbnail" href="works/photoboothweb" target="_blank">
+								<a class="thumbnail" href="works/photoboothweb" target="_blank" data-title="uhu" data-content="hoge" rel="popover-hover">
 									<p><img src="img/works/photoboothweb.png" /></p>
 									<div class="caption">
 										<h5>Photo Booth on the Web</h5>
@@ -67,14 +80,6 @@ footer small { font-size: 0.9em; }
 						</div>
 						<div class="thumbnails row-fluid">
 							<section class="span4">
-								<a class="thumbnail" href="works/ddhighlighter/" target="_blank">
-									<p><img src="img/works/ddhighlighter.png" /></p>
-									<div class="caption">
-										<h5>Drag &amp; Drop Syntax Highlighter</h5>
-									</div>
-								</a>
-							</section>
-							<section class="span4">
 								<a class="thumbnail" href="works/lifegame-js/" target="_blank">
 									<p><img src="img/works/lifegame.png" /></p>
 									<div class="caption">
@@ -83,20 +88,30 @@ footer small { font-size: 0.9em; }
 								</a>
 							</section>
 							<section class="span4">
-								<a class="thumbnail" href="works/hatenap/sample/" target="_blank">
-									<p><img src="img/works/hatenap.png" /></p>
-									<div class="caption">
-										<h5>Hatena(+) Syntax Parser</h5>
-									</div>
-								</a>
-							</section>
-						</div>
-						<div class="thumbnails row-fluid">
-							<section class="span4">
 								<a class="thumbnail" href="works/jquery.mine/" target="_blank">
 									<p><img src="img/works/mine.png" /></p>
 									<div class="caption">
 										<h5>MineSweeper (jquery.mine.js)</h5>
+									</div>
+								</a>
+							</section>
+						</div>
+						
+						<h2>Tools <small>ツール類</small></h2>
+						<div class="thumbnails row-fluid">
+							<section class="span4">
+								<a class="thumbnail" href="works/ddhighlighter/" target="_blank">
+									<p><img src="img/works/ddhighlighter.png" /></p>
+									<div class="caption">
+										<h5>Drag &amp; Drop Syntax Highlighter</h5>
+									</div>
+								</a>
+							</section>
+							<section class="span4">
+								<a class="thumbnail" href="works/hatenap/sample/" target="_blank">
+									<p><img src="img/works/hatenap.png" /></p>
+									<div class="caption">
+										<h5>Hatena(+) Syntax Parser</h5>
 									</div>
 								</a>
 							</section>
@@ -111,10 +126,14 @@ footer small { font-size: 0.9em; }
 						</div>
 						<p style="text-align: right"><a href="https://github.com/s-shin/s-shin.github.com/tree/master/works">→ view the souce code of these projects</a></p>
 					</section>
-					<section id="works2">
+					
+					<!-- Other Works -->
+					<section class="works2">
 						<header class="page-header">
 							<h1>Other Works <small>その他、色々</small></h1>
 						</header>
+						
+						<h2>OS <small>Operating System</small></h2>
 						<div class="thumbnails row-fluid">
 							<section class="span4">
 								<a class="thumbnail" href="https://github.com/s-shin/xv6-network" target="_blank">
@@ -123,6 +142,10 @@ footer small { font-size: 0.9em; }
 									</div>
 								</a>
 							</section>
+						</div>
+						
+						<h2>Libraries <small>ライブラリ</small></h2>
+						<div class="thumbnails row-fluid">
 							<section class="span4">
 								<a class="thumbnail" href="https://github.com/s-shin/jquery.processing.js" target="_blank">
 									<div class="caption">
@@ -130,6 +153,10 @@ footer small { font-size: 0.9em; }
 									</div>
 								</a>
 							</section>
+						</div>
+						
+						<h2>Games <small>ゲーム</small></h2>
+						<div class="thumbnails row-fluid">
 							<section class="span4">
 								<a class="thumbnail" href="https://github.com/s-shin/jsnake" target="_blank">
 									<div class="caption">
@@ -138,9 +165,13 @@ footer small { font-size: 0.9em; }
 								</a>
 							</section>
 						</div>
+						
 					</section>
 				</div>
-				<div class="span3">
+				
+				<!-- ### Misc ### -->
+				
+				<div class="span3 misc">
 					<!--
 					<section id="profile">
 						<header class="page-header">
