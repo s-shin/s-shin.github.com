@@ -1,0 +1,116 @@
+{
+	"works": [
+		{
+			"dummy": "================= Work #1 =================",
+			"title": "Works on the Web",
+			"subTitle": "Web上で動くもの",
+			"categories": [
+				{
+					"dummy": "============== category ==============",
+					"title": "Entertainment",
+					"subTitle": "楽しいもの",
+					"contents": [
+						{
+							"title": "Photo Booth on the Web",
+							"url": "works/photoboothweb",
+							"img": "img/works/photoboothweb.png",
+							"abstract": "Max OS XにプリインストールされているPhoto Boothを、UserMedia(WebRTC)やWebGLによりハードウェアアクセラレートされたフィルタなどを用いて、Pure JavaScriptで再現したものです。重いです。"
+						},
+						{
+							"title": "Snake Game by $.processing",
+							"url": "works/snakegame",
+							"img": "img/works/snakegame.png",
+							"abstract": "伝統的なヘビゲームをProcessing.jsを用いてウェブ上で再現したものです。"
+						},
+						{
+							"title": "Nagameru Pi",
+							"url": "works/nagamerupi",
+							"img": "img/works/nagamerupi.png",
+							"abstract": "永遠と円周率を出力します。全画面にしてボーっと眺めましょう。"
+						},
+						{
+							"title": "Life Game",
+							"url": "works/lifegame-js",
+							"img": "img/works/lifegame.png",
+							"abstract": "ライフゲームをWeb上に実装したものです。クリックでフィールドのカスタマイズもできます。"
+						},
+						{
+							"title": "MineSweeper (jquery.mine.js)",
+							"url": "works/jquery.mine",
+							"img": "img/works/mine.png",
+							"abstract": "普通のマインスイーパーです。意外と普通に遊べます。jQueryプラグイン形式で実装したので、独自のサイトに組み込むこともできる…かもしれませんが、ドキュメントはありません。"
+						}
+					]
+				},
+				{
+					"dummy": "============== category ==============",
+					"title": "Tools",
+					"subTitle": "ツールの類",
+					"contents": [
+						{
+							"title": "Drag &amp; Drop Syntax Highlighter",
+							"url": "works/ddhighlighter",
+							"img": "img/works/ddhighlighter.png",
+							"abstract": "HTML5のドラッグ＆ドロップAPIを利用した、ソースコードビューワです。サポートする言語は、ハイライトのために使用しているGoogle Code Prettifyに依存します。エディタを立ち上げるのが面倒な時に便利です。"
+						},
+						{
+							"title": "Hatena(+) Syntax Parser",
+							"url": "works/hatenap/sample",
+							"img": "img/works/hatenap.png",
+							"abstract": "JavaScript製のはてな記法パーサです。現行の記法とは完全互換ではありません。また、余計な(?)オレオレ機能も追加されています。リンク先はリアルタイムなエディタになっています。チートシートもあるので色々いじってみて下さい。"
+						},
+						{
+							"title": "Parze",
+							"url": "https://github.com/s-shin/s-shin.github.com/tree/master/works/parze",
+							"img": "img/works/parze.png",
+							"abstract": "Hatena(+) Syntax Parserから、Parser部を分離してライブラリ化したものです。もっとも、Flex/Bisonのような、完全なParserではなく、行単位で解析を行う簡易コンバータ用途でのみ利用できます。サンプルとして、はてなプラス記法のプラグインを実装しています。頑張ればMarkdownなども変換できるはずです。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"dummy": "================= Work #2 =================",
+			"title": "Other Works",
+			"subTitle": "その他、色々",
+			"categories": [
+				{
+					"dummy": "============== category ==============",
+					"title": "OS",
+					"subTitle": "Operating System",
+					"contents": [
+						{
+							"title": "Xv6 with Network",
+							"url": "https://github.com/s-shin/xv6-network",
+							"abstract": "教育用OS「xv6」にEthernet(NE2000)のデバイスドライバを実装したものです。OSの学習の目的で作成しており、実装は完全ではありませんが、DHCPでIPアドレスを受け取る部分まで実装しました。"
+						}
+					]
+				},
+				{
+					"dummy": "============== category ==============",
+					"title": "Libraries, Frameworks",
+					"subTitle": "ライブラリやフレームワーク",
+					"contents": [
+						{
+							"title": "jquery.processing.js",
+							"url": "https://github.com/s-shin/jquery.processing.js",
+							"abstract": "Processing.jsをより簡単に利用するためのjQueryライブラリです。簡易的なシーン管理システムもあります。"
+						}
+					]
+				},
+				{
+					"dummy": "============== category ==============",
+					"title": "Game",
+					"subTitle": "ゲーム",
+					"contents": [
+						{
+							"title": "JSnake",
+							"url": "https://github.com/s-shin/jsnake",
+							"abstract": "ヘビゲームをウェブベースでオンラインゲーム化したものです。サーバサイドにNode.js、通信にWebSocket(Socket.IO)、クライアントサイドではKnockout.jsを使うなど、自分にとって挑戦的なプロジェクトで、大変勉強になりました。設計やコードは我ながら酷いものですが、後学のために公開しています。"
+						}
+					]
+				}
+			]
+		}
+	]
+}

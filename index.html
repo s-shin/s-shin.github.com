@@ -28,8 +28,8 @@ header.page-header h1 small { font-size: 0.5em; }
 .thumbnails { margin-bottom: 13px; }
 .thumbnail p { border: 1px dashed #AAA; }
 .thumbnail .caption h5 { text-align: center; font-size: 12px; margin: 0; }
-.works1 .thumbnails p { height: 150px; overflow: hidden; margin: 0; }
-.works h2 { border-left: 10px solid #000; padding-left: 0.4em; }
+.works .thumbnails p { height: 150px; overflow: hidden; margin: 0; }
+.works h2 { border-left: 10px solid #000; padding-left: 0.4em; font-size: 1.8em; line-height: 1.5;}
 
 footer { text-align: center; background-color: #EEE; margin-top: 30px; padding: 1em; border-top: 1px #DDD solid; }
 footer small { font-size: 0.9em; }
@@ -43,134 +43,212 @@ footer small { font-size: 0.9em; }
 			<div class="row-fluid">
 				
 				<!-- ### Works ### -->
-				
 				<div class="span9 works">
-					<!-- Works on the Web -->
-					<section class="works1">
+					
+					<section>
 						<header class="page-header">
 							<h1>Works on the Web <small>Web上で動くもの</small></h1>
 						</header>
 						
 						<h2>Entertainment <small>楽しいもの</small></h2>
 						<div class="thumbnails row-fluid">
-							<section class="span4">
-								<a class="thumbnail" href="works/photoboothweb" target="_blank" data-title="uhu" data-content="hoge" rel="popover-hover">
-									<p><img src="img/works/photoboothweb.png" /></p>
+							
+								
+							<div class="span4">
+								<a class="thumbnail" target="_blank" rel="popover-hover"
+								href="works/photoboothweb"
+								data-title="Photo Booth on the Web"
+								data-content="Max OS XにプリインストールされているPhoto Boothを、UserMedia(WebRTC)やWebGLによりハードウェアアクセラレートされたフィルタなどを用いて、Pure JavaScriptで再現したものです。重いです。">
+								
+									<p><img src="img/works/photoboothweb.png" alt="" /></p>
+								
 									<div class="caption">
 										<h5>Photo Booth on the Web</h5>
 									</div>
 								</a>
-							</section>
-							<section class="span4">
-								<a class="thumbnail" href="works/snakegame/" target="_blank">
-									<p><img src="img/works/snakegame.png" /></p>
+							</div>
+							
+								
+							<div class="span4">
+								<a class="thumbnail" target="_blank" rel="popover-hover"
+								href="works/snakegame"
+								data-title="Snake Game by $.processing"
+								data-content="伝統的なヘビゲームをProcessing.jsを用いてウェブ上で再現したものです。">
+								
+									<p><img src="img/works/snakegame.png" alt="" /></p>
+								
 									<div class="caption">
 										<h5>Snake Game by $.processing</h5>
 									</div>
 								</a>
-							</section>
-							<section class="span4">
-								<a class="thumbnail" href="works/nagamerupi/" target="_blank">
-									<p><img src="img/works/nagamerupi.png" /></p>
+							</div>
+							
+								
+							<div class="span4">
+								<a class="thumbnail" target="_blank" rel="popover-hover"
+								href="works/nagamerupi"
+								data-title="Nagameru Pi"
+								data-content="永遠と円周率を出力します。全画面にしてボーっと眺めましょう。">
+								
+									<p><img src="img/works/nagamerupi.png" alt="" /></p>
+								
 									<div class="caption">
 										<h5>Nagameru Pi</h5>
 									</div>
 								</a>
-							</section>
+							</div>
+							
+								
 						</div>
 						<div class="thumbnails row-fluid">
-							<section class="span4">
-								<a class="thumbnail" href="works/lifegame-js/" target="_blank">
-									<p><img src="img/works/lifegame.png" /></p>
+								
+							<div class="span4">
+								<a class="thumbnail" target="_blank" rel="popover-hover"
+								href="works/lifegame-js"
+								data-title="Life Game"
+								data-content="ライフゲームをWeb上に実装したものです。クリックでフィールドのカスタマイズもできます。">
+								
+									<p><img src="img/works/lifegame.png" alt="" /></p>
+								
 									<div class="caption">
 										<h5>Life Game</h5>
 									</div>
 								</a>
-							</section>
-							<section class="span4">
-								<a class="thumbnail" href="works/jquery.mine/" target="_blank">
-									<p><img src="img/works/mine.png" /></p>
+							</div>
+							
+								
+							<div class="span4">
+								<a class="thumbnail" target="_blank" rel="popover-hover"
+								href="works/jquery.mine"
+								data-title="MineSweeper (jquery.mine.js)"
+								data-content="普通のマインスイーパーです。意外と普通に遊べます。jQueryプラグイン形式で実装したので、独自のサイトに組み込むこともできる…かもしれませんが、ドキュメントはありません。">
+								
+									<p><img src="img/works/mine.png" alt="" /></p>
+								
 									<div class="caption">
 										<h5>MineSweeper (jquery.mine.js)</h5>
 									</div>
 								</a>
-							</section>
+							</div>
+							
 						</div>
 						
-						<h2>Tools <small>ツール類</small></h2>
+						<h2>Tools <small>ツールの類</small></h2>
 						<div class="thumbnails row-fluid">
-							<section class="span4">
-								<a class="thumbnail" href="works/ddhighlighter/" target="_blank">
-									<p><img src="img/works/ddhighlighter.png" /></p>
+							
+								
+							<div class="span4">
+								<a class="thumbnail" target="_blank" rel="popover-hover"
+								href="works/ddhighlighter"
+								data-title="Drag &amp; Drop Syntax Highlighter"
+								data-content="HTML5のドラッグ＆ドロップAPIを利用した、ソースコードビューワです。サポートする言語は、ハイライトのために使用しているGoogle Code Prettifyに依存します。エディタを立ち上げるのが面倒な時に便利です。">
+								
+									<p><img src="img/works/ddhighlighter.png" alt="" /></p>
+								
 									<div class="caption">
 										<h5>Drag &amp; Drop Syntax Highlighter</h5>
 									</div>
 								</a>
-							</section>
-							<section class="span4">
-								<a class="thumbnail" href="works/hatenap/sample/" target="_blank">
-									<p><img src="img/works/hatenap.png" /></p>
+							</div>
+							
+								
+							<div class="span4">
+								<a class="thumbnail" target="_blank" rel="popover-hover"
+								href="works/hatenap/sample"
+								data-title="Hatena(+) Syntax Parser"
+								data-content="JavaScript製のはてな記法パーサです。現行の記法とは完全互換ではありません。また、余計な(?)オレオレ機能も追加されています。リンク先はリアルタイムなエディタになっています。チートシートもあるので色々いじってみて下さい。">
+								
+									<p><img src="img/works/hatenap.png" alt="" /></p>
+								
 									<div class="caption">
 										<h5>Hatena(+) Syntax Parser</h5>
 									</div>
 								</a>
-							</section>
-							<section class="span4">
-								<a class="thumbnail" href="https://github.com/s-shin/s-shin.github.com/tree/master/works/parze" target="_blank">
-									<p><img src="img/works/parze.png" /></p>
+							</div>
+							
+								
+							<div class="span4">
+								<a class="thumbnail" target="_blank" rel="popover-hover"
+								href="https://github.com/s-shin/s-shin.github.com/tree/master/works/parze"
+								data-title="Parze"
+								data-content="Hatena(+) Syntax Parserから、Parser部を分離してライブラリ化したものです。もっとも、Flex/Bisonのような、完全なParserではなく、行単位で解析を行う簡易コンバータ用途でのみ利用できます。サンプルとして、はてなプラス記法のプラグインを実装しています。頑張ればMarkdownなども変換できるはずです。">
+								
+									<p><img src="img/works/parze.png" alt="" /></p>
+								
 									<div class="caption">
 										<h5>Parze</h5>
 									</div>
 								</a>
-							</section>
+							</div>
+							
 						</div>
-						<p style="text-align: right"><a href="https://github.com/s-shin/s-shin.github.com/tree/master/works">→ view the souce code of these projects</a></p>
+						
 					</section>
 					
-					<!-- Other Works -->
-					<section class="works2">
+					<section>
 						<header class="page-header">
 							<h1>Other Works <small>その他、色々</small></h1>
 						</header>
 						
 						<h2>OS <small>Operating System</small></h2>
 						<div class="thumbnails row-fluid">
-							<section class="span4">
-								<a class="thumbnail" href="https://github.com/s-shin/xv6-network" target="_blank">
+							
+								
+							<div class="span4">
+								<a class="thumbnail" target="_blank" rel="popover-hover"
+								href="https://github.com/s-shin/xv6-network"
+								data-title="Xv6 with Network"
+								data-content="教育用OS「xv6」にEthernet(NE2000)のデバイスドライバを実装したものです。OSの学習の目的で作成しており、実装は完全ではありませんが、DHCPでIPアドレスを受け取る部分まで実装しました。">
+								
 									<div class="caption">
 										<h5>Xv6 with Network</h5>
 									</div>
 								</a>
-							</section>
+							</div>
+							
 						</div>
 						
-						<h2>Libraries <small>ライブラリ</small></h2>
+						<h2>Libraries, Frameworks <small>ライブラリやフレームワーク</small></h2>
 						<div class="thumbnails row-fluid">
-							<section class="span4">
-								<a class="thumbnail" href="https://github.com/s-shin/jquery.processing.js" target="_blank">
+							
+								
+							<div class="span4">
+								<a class="thumbnail" target="_blank" rel="popover-hover"
+								href="https://github.com/s-shin/jquery.processing.js"
+								data-title="jquery.processing.js"
+								data-content="Processing.jsをより簡単に利用するためのjQueryライブラリです。簡易的なシーン管理システムもあります。">
+								
 									<div class="caption">
 										<h5>jquery.processing.js</h5>
 									</div>
 								</a>
-							</section>
+							</div>
+							
 						</div>
 						
-						<h2>Games <small>ゲーム</small></h2>
+						<h2>Game <small>ゲーム</small></h2>
 						<div class="thumbnails row-fluid">
-							<section class="span4">
-								<a class="thumbnail" href="https://github.com/s-shin/jsnake" target="_blank">
+							
+								
+							<div class="span4">
+								<a class="thumbnail" target="_blank" rel="popover-hover"
+								href="https://github.com/s-shin/jsnake"
+								data-title="JSnake"
+								data-content="ヘビゲームをウェブベースでオンラインゲーム化したものです。サーバサイドにNode.js、通信にWebSocket(Socket.IO)、クライアントサイドではKnockout.jsを使うなど、自分にとって挑戦的なプロジェクトで、大変勉強になりました。設計やコードは我ながら酷いものですが、後学のために公開しています。">
+								
 									<div class="caption">
 										<h5>JSnake</h5>
 									</div>
 								</a>
-							</section>
+							</div>
+							
 						</div>
 						
 					</section>
+					
 				</div>
-				
+
 				<!-- ### Misc ### -->
-				
 				<div class="span3 misc">
 					<!--
 					<section id="profile">
@@ -189,6 +267,7 @@ footer small { font-size: 0.9em; }
 							<li><a href="http://jsdo.it/s-shin/codes" target="_blank">jsdo.it</a></li>
 						</ul>
 					</section>
+					
 				</div>
 			</div>
 		</div>

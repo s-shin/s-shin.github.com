@@ -1,0 +1,6 @@
+
+```
+$ rake
+$ open index.html
+```
+

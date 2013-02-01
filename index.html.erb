@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8" />
+		<title>s-shin.github.com</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
+		<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap.min.css" rel="stylesheet" />
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css" rel="stylesheet" />
+		<!--[if IE 7]>
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome-ie7.css" rel="stylesheet" />
+		<![endif]-->
+		<script>
+$(function() {
+	$("a[rel=popover]").popover();
+	$("a[rel=popover-hover]").popover({trigger: "hover"});
+});
+		</script>
+		<style>
+body { border: 1px solid #000; border-width: 10px 0 0; }
+#overview { text-align: center; }
+#overview h1 { font-size: 3em; line-height: 2; margin: 0.5em auto; width: 10em; border-bottom: 1px solid #000; }
+
+header.page-header h1 { font-size: 36px; }
+header.page-header h1 small { font-size: 0.5em; }
+.thumbnails { margin-bottom: 13px; }
+.thumbnail p { border: 1px dashed #AAA; }
+.thumbnail .caption h5 { text-align: center; font-size: 12px; margin: 0; }
+.works .thumbnails p { height: 150px; overflow: hidden; margin: 0; }
+.works h2 { border-left: 10px solid #000; padding-left: 0.4em; font-size: 1.8em; line-height: 1.5;}
+
+footer { text-align: center; background-color: #EEE; margin-top: 30px; padding: 1em; border-top: 1px #DDD solid; }
+footer small { font-size: 0.9em; }
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<header id="overview">
+				<h1>s-shin.github.com</h1>
+			</header>
+			<div class="row-fluid">
+				
+				<!-- ### Works ### -->
+				<div class="span9 works">
+					<% @index["works"].each do |work| %>
+					<section>
+						<header class="page-header">
+							<h1><%= work["title"] %> <small><%= work["subTitle"] %></small></h1>
+						</header>
+						<% work["categories"].each do |ctg| %>
+						<h2><%= ctg["title"] %> <small><%= ctg["subTitle"] %></small></h2>
+						<div class="thumbnails row-fluid">
+							<% ctg["contents"].each_with_index do |content, i| %>
+								<% if i % 3 == 0 && i > 0 %>
+						</div>
+						<div class="thumbnails row-fluid">
+								<% end %>
+							<div class="span4">
+								<a class="thumbnail" target="_blank" rel="popover-hover"
+								href="<%= content["url"] %>"
+								data-title="<%= content["title"] %>"
+								data-content="<%= content["abstract"] %>">
+								<% if content["img"] %>
+									<p><img src="<%= content["img"] %>" alt="" /></p>
+								<% end %>
+									<div class="caption">
+										<h5><%= content["title"] %></h5>
+									</div>
+								</a>
+							</div>
+							<% end %>
+						</div>
+						<% end %>
+					</section>
+					<% end %>
+				</div>
+
+				<!-- ### Misc ### -->
+				<div class="span3 misc">
+					<!--
+					<section id="profile">
+						<header class="page-header">
+							<h1>Profile</h1>
+						</header>
+					</section>
+					-->
+					<section id="links">
+						<header class="page-header">
+							<h1>Links <small>各種リンク</small></h1>
+						</header>
+						<ul>
+							<li><a href="http://shin.hateblo.jp/" target="_blank">blog</a></li>
+							<li><a href="https://github.com/s-shin" target="_blank">github</a>, <a href="https://gist.github.com/s-shin">gist</a></li>
+							<li><a href="http://jsdo.it/s-shin/codes" target="_blank">jsdo.it</a></li>
+						</ul>
+					</section>
+					
+				</div>
+			</div>
+		</div>
+		<footer>
+			<a href="https://github.com/s-shin/s-shin.github.com"><small>source of this site</small></a>
+			<br />
+			<small>&copy; 2012 shin &lt;s2pch.luck at gmail.com&gt;</small>
+		</footer>
+		<!-- google analytics -->
+		<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-12799503-6']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+		</script>
+	</body>
+</html>
+
+
+
